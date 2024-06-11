@@ -25,31 +25,40 @@ body {
     display: flex;
     padding: 12px;
 }
-#datosform h3 {
+#h3formu{
     text-align: center;
 }
 #qsomos {
     background-color: rgb(53, 53, 53);
     text-align: center;
     padding: 20px;
+    margin: 10px;
+    color: white;
 }
 #qofrece {
     background-color: rgb(53, 53, 53);
     text-align: center;
     padding: 20px;
     border-radius: 7px;
+    margin: 10px;
+    color: white;
 }
 #pqtrabajar {
     background-color: rgb(53, 53, 53);
     text-align: center;
     padding: 8px;
     color: white;
-    margin: 7px;
+    margin: 10px;
+    text-align: center;
     
 }
 #mision {
     background-color: rgb(53, 53, 53);
-    padding: 20px;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    margin: 10px;
+    text-align: center;
 }
 #Submit {
     width: 100%;
