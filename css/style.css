@@ -1,0 +1,65 @@
+#h11 {
+    color: black;
+    margin-left: 40%;
+    margin-top: 10px;
+    font-style: normal;
+    font-display: flex;
+    
+}
+body {
+    background-color: white;
+}
+#datosform {
+    width: 100px;
+    margin-right: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+    display: inline-block;
+}
+#formdiv {
+    background-color: rgb(122, 8, 8);
+    width: auto;
+    color: white;
+    border-radius: 7px;
+    display: flex;
+    padding: 12px;
+}
+#datosform h3 {
+    text-align: center;
+}
+#qsomos {
+    background-color: rgb(53, 53, 53);
+    text-align: center;
+    padding: 20px;
+}
+#qofrece {
+    background-color: rgb(53, 53, 53);
+    text-align: center;
+    padding: 20px;
+    border-radius: 7px;
+}
+#pqtrabajar {
+    background-color: rgb(53, 53, 53);
+    text-align: center;
+    padding: 8px;
+    color: white;
+    margin: 7px;
+    
+}
+#mision {
+    background-color: rgb(53, 53, 53);
+    padding: 20px;
+}
+#Submit {
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
