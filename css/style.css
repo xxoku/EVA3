@@ -1,14 +1,27 @@
-#h11 {
-    color: black;
-    margin-left: 40%;
-    margin-top: 10px;
-    font-style: normal;
-    font-display: flex;
+header {
+    text-align: center;
+    background-color: red;
+    padding: 10px;
+    color: white;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+#riotlogobox {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
-body {
-    background-color: white;
+
+#rioticonbox {
+    text-align: center;
 }
+
 #datosform {
     width: 100px;
     margin-right: 100%;
@@ -17,6 +30,7 @@ body {
     border-radius: 4px;
     display: inline-block;
 }
+
 #formdiv {
     background-color: rgb(122, 8, 8);
     width: auto;
@@ -25,44 +39,74 @@ body {
     display: flex;
     padding: 12px;
 }
+
 #h3formu{
     text-align: center;
 }
-#qsomos {
-    background-color: rgb(53, 53, 53);
-    text-align: center;
-    padding: 20px;
-    margin: 10px;
+
+#qsomos, #qofrece, #pqtrabajar {
+    padding: 30px;
     color: white;
-}
-#qofrece {
-    background-color: rgb(53, 53, 53);
-    text-align: center;
-    padding: 20px;
+    background-color: rgb(17, 17, 17, 0.76);
     border-radius: 7px;
-    margin: 10px;
-    color: white;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
 }
-#pqtrabajar {
-    background-color: rgb(53, 53, 53);
+#datosbox {
+    display: flex;
+}
+
+#datosform label{
+    display: block; 
+    padding: 6px;
+    text-align: start;
+
+}
+
+#datosform {
+    width: 500px;
+    margin: auto;
+    background-color: red;
+    border-radius: 7%;
     text-align: center;
-    padding: 8px;
+    padding: 40px;
     color: white;
-    margin: 10px;
-    text-align: center;
     
 }
+
+#datosform input{
+    width: 98%;
+    margin-top: 7px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    border-color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.radiogroup {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+}
 #mision {
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(17, 17, 17, 0.76);
     text-align: center;
     padding: 8px;
     color: white;
     margin: 10px;
     text-align: center;
 }
+
 #Submit {
     width: 100%;
-    background-color: red;
+    background-color: rgb(63, 3, 3);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -71,4 +115,20 @@ body {
     cursor: pointer;
 }
 
+#vid {
+    text-align: center;
+}
 
+#redes {
+    padding: 30px;
+    display: block;
+    color: white;
+    background-color: red;
+    text-align: center;
+
+}
+
+#redes a {
+    color: white;
+    padding: 20px;
+}

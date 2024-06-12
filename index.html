@@ -5,11 +5,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
-    <h1 id="h11">Bienvenido a Riot Games </h1>
+
 <body>
-    <button onclick="ccontraste" id="ccontraste">Cambiar contraste</button>
+    <header id="head"><h1>Bienvenido a Riot Games </h1></header>
+    <button id="btnCon">Cambiar contraste</button>
     <button onclick="cfuente" id="cfuente">Cambiar fuente</button>
-    <img src="css/pictures/riotlogo.png" alt="!" width="100" height="100">
+    <div id="rioticonbox">
+        <img id="rioticon" src="css/pictures/riotlogo.png" alt="!">
+    </div>
     
     <div id="qsomos">
         <h2>Quienes somos? </h2>
@@ -23,35 +26,45 @@
         <h3>Por que deberias trabajar con nosotros?</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur ipsam omnis inventore amet, fugit asperiores excepturi assumenda dolorum nesciunt, ipsa, recusandae illum tempore ullam magni maiores! Dolores modi fuga odio, qui voluptatem commodi et non aliquam doloremque necessitatibus libero! Quo vitae, minus facere cupiditate quaerat quis ullam est provident non in dolorum ipsa dolorem. Assumenda voluptatum temporibus pariatur beatae, at odit! Enim, ad quam. Nostrum quibusdam est magnam officiis hic officia sequi laborum eum culpa dolore. Quod eius earum iste cupiditate facere? Veniam minus possimus praesentium quas, facere atque adipisci numquam quam, porro nihil velit. Similique illum esse vel eveniet doloribus hic eaque neque itaque consequuntur, eos minima adipisci vero tenetur impedit quae totam iusto quidem? Quidem cum inventore laborum alias distinctio accusamus totam fugit illo hic facere magni, qui nisi reiciendis! Maiores voluptatum magni quo fugit similique unde, exercitationem numquam. Tempora voluptatibus ipsam quasi amet quam aut laudantium iure, beatae necessitatibus. Quam veniam odio iusto nostrum, alias illum similique necessitatibus praesentium unde sunt non nihil ratione labore veritatis quo! Accusamus cupiditate, iusto eius repellendus soluta perferendis dolor quod! Placeat amet inventore minus quisquam maxime debitis, laborum consectetur sunt ex nobis nemo ab aspernatur vitae, blanditiis porro, quod accusamus dolorum.</p>
     </div>
-        <div id="formdiv">
-        <form id="datosform">
-            <h3 id="h3formu">¿Quieres trabajar con nosotros? Te Contactamos. </h3>
-            <label for="Name">Nombre</label>
-            <input type="text" id="Name" name="Name" placeholder="Ingresa aquí tu Nombre" >
+    <div id="datosbox">
+        <div id="datosform">
+            <form>
+                <h3 id="h3formu">¿Quieres trabajar con nosotros? Te Contactamos. </h3>
+                <label for="Name">Nombre</label>
+                <input type="text" id="Name" name="Name" placeholder="Ingresa aquí tu Nombre" >
 
-            <label for="Apellido">Apellido</label>
-            <input type="text" id="Apellido" apellido="Apellido" placeholder="Ingresa aquí tu apellido... " >
+                <label for="Apellido">Apellido</label>
+                <input type="text" id="Apellido" apellido="Apellido" placeholder="Ingresa aquí tu apellido... " >
 
-            <label for="Rut">Rut</label>
-            <input type="number" id="Rut" rut="rut" placeholder="Ej: 21697482-4" >
+                <label for="Rut">Rut</label>
+                <input type="number" id="Rut" rut="rut" placeholder="Ej: 21697482-4" >
 
-            <label for="email">Email</label>
-            <input type="email" id="Email" email="Email" placeholder="Ingresa aquí tu email... ">
+                <label for="email">Email</label>
+                <input type="email" id="Email" email="Email" placeholder="Ingresa aquí tu email... ">
 
-            <label for="direccion">Direccion</label>
-            <input type="text" id="direccion" direccion="Direccion" placeholder="Ingresa aquí tu direccion... ">
+                <label for="direccion">Direccion</label>
+                <input type="text" id="direccion" direccion="Direccion" placeholder="Ingresa aquí tu direccion... ">
 
-            <label for="codpostal">Codigo Postal</label>
-            <input type="text" id="codpostal" codpostal="codpostal" placeholder="Ingresa aquí el codigo postal de tu ciudad... ">
+                <label for="codpostal">Codigo Postal</label>
+                <input type="text" id="codpostal" codpostal="codpostal" placeholder="Ingresa aquí el codigo postal de tu ciudad... ">
 
-            <label for="fono">Telefono</label>
-            <input type="number" id="Telefono" fono="Telefono" placeholder="Ej: +569 2293 1923">
+                <label for="fono">Telefono</label>
+                <input type="number" id="Telefono" fono="Telefono" placeholder="Ej: +569 2293 1923">
 
-            <label for="Asunto">Asunto</label>
-            <input type="text" id="asunto" asunto="Asunto" placeholder="Ej: 21697482-4" >
+                <label for="edad">Edad</label>
+                <div class="radiogroup">
+                    <input type="radio" id="Mayor" name="Edad" value="Mayor">
+                    <label for="Mayor">+18 años</label>
+                    <input type="radio" id="Menor" name="Edad" value="Menor">
+                    <label for="Menor">-18 años</label>
+                </div>
 
-            <input type="submit" id="Submit"> 
-        </form>
+                <label for="Comentarios">Comentarios</label>
+                <textarea name="comentarios" id="Comentarios"></textarea>
+
+                <input type="submit" id="Submit"> 
+            </form>
+        </div>    
     </div>    
         <div id="mision">
             <h1>Misión y Visión</h1>
@@ -59,11 +72,11 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, illum? Ducimus voluptas pariatur consectetur. Beatae ut ducimus fugit vero in rerum dicta impedit? Recusandae aspernatur numquam autem quidem ipsam maiores labore animi, earum placeat, quis voluptas vel laborum voluptatum velit voluptatibus laboriosam unde nulla, aut eligendi quasi sed est? Eveniet a placeat tempore quos itaque, totam debitis harum ducimus excepturi ullam quibusdam repellendus molestiae temporibus quidem dolores adipisci reprehenderit beatae culpa porro. Reprehenderit quisquam est in ipsa labore sequi autem commodi libero quod aspernatur nobis temporibus nihil cum, perspiciatis rem, modi, iure eligendi numquam adipisci maiores. Culpa quae perferendis natus quod iure nulla velit itaque placeat. Dignissimos adipisci recusandae odit harum eligendi rem id sint soluta magnam alias ab voluptate reprehenderit animi, est explicabo possimus? Explicabo quaerat fugit pariatur assumenda, suscipit non corrupti deserunt? Magni dolorum sequi asperiores! Officiis nemo et id dolor labore ipsa distinctio corrupti porro vitae, tenetur rerum voluptatem sequi. Consequatur aperiam deleniti, rerum incidunt eveniet harum reiciendis expedita cum laborum laudantium officiis alias voluptatibus ipsum facere tempore. Nisi rem facere dolorem, recusandae inventore quaerat laudantium aut tenetur veritatis ipsum nobis totam. Iusto tempora provident quae ex doloremque amet, illo perferendis voluptatibus ipsam debitis pariatur officiis ipsum?</p>
         </div>
 
-        <div>
-            <H3>A continuacion nuestro ultimo trailer de League of Legends" Temporada 2024 </H3>
-            <video width="320" height="240" controls autoplay muted>
-                <source src="https://www.youtube.com/watch?v=ZHhqwBwmRkI" type="video/mp4">
-              </video>
+        <div id="vidbox">
+            <div id="vid">
+                <H3>A continuacion nuestro ultimo trailer de "League of Legends" Temporada 2024 </H3>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/ZHhqwBwmRkI" title="Sigo aquí | Cinemática de la temporada 2024 - League of Legends" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>    
         </div>
     
     <div id="redes"> 

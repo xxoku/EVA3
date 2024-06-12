@@ -1,13 +1,21 @@
 window.addEventListener("load",()=>{
-    document.getElementById 
+    document.getElementById("btnCon").addEventListener("click", osc);
 })
 
 
-//c
-function contraste(){
-    let body = document.body
-    body.classList.toggle(contraste)
-} 
+function osc(){
+    let mision = document.getElementById("qofrece");
+    let qs = document.getElementById("qsomos")
+    let body = document.body;
+
+    if (body.style.backgroundColor === "black"){
+        body .style.backgroundColor= "white";
+        head.style
+    }else{
+        body.style.backgroundColor = "black"
+    }
+    
+}
 
 
 
