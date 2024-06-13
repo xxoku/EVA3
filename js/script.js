@@ -6,7 +6,7 @@ window.addEventListener("load",()=>{
     document.getElementById("Submit").addEventListener("click", registrar);
     document.getElementById("Submit").addEventListener("click", validar);
     cargarDatos();
-    document.getElementById("btnActualizar").addEventListener("click", actualizar);
+    document.getElementById("btnActualizar").addEventListener("click", actualizar);             // se agregan eventos de "click" 
 })
 
 
@@ -28,7 +28,7 @@ function fontsize(){
 }
 
 function validar(){
-    validarVacio("Name");
+    validarVacio("Name"); // Llama a la funcion validarVacio para el campo "name" como todas las demas.
     validarVacio("Apellido");
     validarVacio("Rut");
     validarVacio("Email");
@@ -47,30 +47,30 @@ function validarVacio(idCampo){
     console.log(valor); // Muestra el elemento en consola
     let eParrafo = document.getElementById("p"+idCampo);
     if(valor.trim()==""){
-        elemento.style.borderColor = "black";
-        eParrafo.style.display = "block";
+        elemento.style.borderColor = "black"; // cambia el borde a negro
+        eParrafo.style.display = "block"; // aca muestra el parrafo error
     }else{
-        elemento.style.borderColor = "green";
-        eParrafo.style.display = "none";
+        elemento.style.borderColor = "green"; // aca lo cambia a verde si es correcto
+        eParrafo.style.display = "none";    // Oculta el párrafo de error 
     }
 }
 
-function validarLongitud(idCampo){
+function validarLongitud(idCampo){                          // en esta funcion se valida la longitud con maximo de 9 
     let elemento = document.getElementById(idCampo);
     console.log(elemento);
     let valor = elemento.value;
     console.log(valor);
     console.log(isNaN(valor))
     let eParrafo = document.getElementById("p"+idCampo);
-    if(isNaN(valor)){
-        eParrafo.innerText = "Debes ingresar un numero";
+    if(isNaN(valor)){       // por si el valor no es un número
+        eParrafo.innerText = "Debes ingresar un numero";  
         eParrafo.style.display = "block";
     }
     else{
-        if(valor.trim().length == 9 || valor.trim().length == 0 ){
-            elemento.style.borderColor = "green";
+        if(valor.trim().length == 9 || valor.trim().length == 0 ){          // aca esta el maximo de 9 
+            elemento.style.borderColor = "green"; 
         }else{
-            elemento.style.borderColor = "red";
+            elemento.style.borderColor = "red";                 // si funciona da verde si no rojo
        
         }
     }
@@ -106,12 +106,12 @@ const registrar= ()=>{
 }
 
 const cargarDatos = ()=>{
-    obtenerPersonas().then((riot)=>{
-        console.log(riot)
+    obtenerPersonas().then((riot)=>{   // Llama a la funcion obtenerPersonas
+        console.log(riot) // muestra los datos que tiene en consola
         //cargarlo en la tabla html
-        let estructura = ""
+        let estructura = "" // inicia la cadena vacia para la tabla 
         riot.forEach((p)=>{
-            estructura += "<tr>"
+            estructura += "<tr>" // todo para agregar los nombres a las filas 
             estructura += "<td>"+p.nombre+"</td>"
             estructura += "<td>"+p.apellido+"</td>"
             estructura += "<td>"+p.rut+"</td>"
@@ -125,7 +125,7 @@ const cargarDatos = ()=>{
         })
         document.getElementById("cuerpoTabla").innerHTML = estructura;
 
-        riot.forEach((p)=>{
+        riot.forEach((p)=>{ // recorre los datos obtenidos 
             let elemento = document.getElementById("UPD"+p.id);
             elemento.addEventListener("click",()=>{
                 document.getElementById("UPDnombre").value = p.nombre;
@@ -138,17 +138,17 @@ const cargarDatos = ()=>{
                 document.getElementById("UPDcomentarios").value = p.comentarios;
                 document.getElementById("btnActualizar").value = p.id;
             });
-            let btnEliminar = document.getElementById("DEL"+p.id);
-            btnEliminar.addEventListener("click",()=>{
+            let btnEliminar = document.getElementById("DEL"+p.id);  // aca obtiene el botonde eliminar 
+            btnEliminar.addEventListener("click",()=>{               // acahace un evento click al boton eliminar 
                 if (confirm("Desea elminar a a:\n"+p.nombre+" "+p.apellido)){
                     eliminarPersona(p.id).then(()=>{
                         alert ("Eliminaste con exito")
-                        cargarDatos();
-                    }).catch((e)=>{
+                        cargarDatos();                              //llama funcion 
+                    }).catch((e)=>{                         // agarra cualquier error 
                         console.log(e)
                     })
                 }else(
-                    consoles.log("Cancelaste la eliminacion")
+                    consoles.log("Cancelaste la eliminacion")     // aca por si la cancela
                 )
                 
                 })
