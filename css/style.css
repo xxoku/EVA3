@@ -1,3 +1,5 @@
+/*asjfjagjkldfshs*/
+
 header {
     text-align: center;
     background-color: red;
@@ -10,12 +12,19 @@ body {
     margin: 0px;
 }
 
+span {
+    color: gold;
+}
+
+p.noDisplay{
+    display: none;
+    color: gold;
+}
 #riotlogobox {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 #rioticonbox {
@@ -44,7 +53,7 @@ body {
     text-align: center;
 }
 
-#qsomos, #qofrece, #pqtrabajar {
+#qsomos, #pqtrabajar, table {
     padding: 30px;
     color: white;
     background-color: rgb(17, 17, 17, 0.76);
@@ -114,11 +123,13 @@ textarea {
     border-radius: 4px;
     cursor: pointer;
 }
-
-#vid {
+#tActualizar{
+    background-color: rgb(17, 17, 17, 0.76);
+    color: white;
+    padding: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
-
 #redes {
     padding: 30px;
     display: block;
@@ -131,4 +142,8 @@ textarea {
 #redes a {
     color: white;
     padding: 20px;
+}
+body.fontsize{
+    font-size: 20px;
+    font-style: italic;
 }
